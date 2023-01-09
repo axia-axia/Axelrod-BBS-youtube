@@ -4,7 +4,7 @@
 <a href="https://github.com/axia-axia/bbs1"><img src="{{ asset('images/sample.jpeg') }}" alt=""></a>
 </p>
 
-## About AXIA
+## About AXIA - Simple version
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
