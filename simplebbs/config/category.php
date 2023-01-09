@@ -1,0 +1,25 @@
+<?php 
+return array(
+  '1' => 'Food', 
+  '2' => 'Travel', 
+  '3' => 'Lifestyle', 
+  '4' => 'Beauty',
+  '5' => 'Finance', 
+  '6' => 'Art',
+  '7' => 'Culture',
+  '8' => 'Car/Bike/Other automobile', 
+  '9' => 'Health',
+  '10' => 'Music', 
+  '11' => 'Business',
+  '12' => 'Book',
+  '13' => 'New-item/Gadget', 
+  '14' => 'Game', 
+  '15' => 'PC/mobile',
+  '16' => 'How-to', 
+  '17' => 'DIY',
+  '18' => 'Sports', 
+  '19' => 'TV/Movie',
+  '20' => 'Mental/Mind',
+  '21' => 'Charity',
+);
+?>
