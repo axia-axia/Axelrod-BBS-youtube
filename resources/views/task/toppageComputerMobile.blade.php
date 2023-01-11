@@ -11,8 +11,8 @@
         <div class="row  text-center">
             <div class="col">
                 <!-- title -->
-                <br><h1 class="text-center">【Computer・Mobile】</h1><br>
-                <h1>REGISTERED WEBSITE</h1>
+                <br><h1 class="text-center">【PC・モバイル等】</h1><br>
+                <h1>登録済ウェブサイト</h1>
 
                 <!-- error msg -->
                 <div>
@@ -62,11 +62,11 @@
                 <table class="table table-dark table-borderless">
                     <thead>
                         <tr>
-                            <th style="width: 15%">IMG</th>
-                            <th style="width: 20%">TITLE</th>
-                            <th style="width: 30%">DESCRIPTION</th>
+                            <th style="width: 15%">画像</th>
+                            <th style="width: 20%">タイトル</th>
+                            <th style="width: 30%">説明</th>
                             <th style="width: 10%">URL</th>
-                            <th style="width: 20%">[Delete]</th>
+                            <th style="width: 20%">[削除]</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,12 +85,12 @@
                             <td>
                                 <form action="{{ route('task.delete')}}" method="POST">
                                     <div class="form-group">
-                                        <label style="font-size:9pt">YOUR EMAIL (Hidden)</label>
+                                        <label style="font-size:9pt">メールアドレス (非表示)</label>
                                         <input type="text" name="youremail" rows="1" cols="1" class="form-control">
                                     </div>
 
                                     <div class="form-group">
-                                        <label style="font-size:9pt">DELETE PWD (Hidden)</label>
+                                        <label style="font-size:9pt">削除パスワード (非表示)</label>
                                         <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                                     </div>
                                     <input name="id" type="hidden" value="{{ $task->id }}">
@@ -119,9 +119,9 @@
     <div class="container-fluid">
         <div class="row  text-center" style="margin-bottom:50px; margin-top:150px">
             <div class="col">
-                <h1>REGISTRATION</h1>
+                <h1>登録</h1>
                 <h6>Fill up bellow.</h6>
-                <h5 style="text-decoration:underline"> [Who can register?] Company, organization, individual, group whatsover!</h5>
+                <h5 style="text-decoration:underline"> [各種登録可能] 企業, 組織, 個人, グループ等</h5>
             </div>
         </div>
     </div>
@@ -216,49 +216,49 @@
                     @csrf
                     <p></p>
                     <div class="form-group">
-                        <label>1.TITLE[40 charactors]</label>
+                        <label>1.タイトル[40文字以内]</label>
                         <input type="text" name="cname" rows="1" cols="1" value="{{old('cname')}}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>2.URL (Correct URL format)</label>
+                        <label>2.URL (正しいフォーマット)</label>
                         <textarea name="url" rows="1" cols="100" class="form-control" value="{{old('url')}}">{{old('url')}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label>3.Description (Max3000)</label>
+                        <label>3.説明 (3000文字以内)</label>
                         <textarea name="description" rows="5" cols="100" class="form-control"  value="{{old('url')}}">{{old('description')}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label>4.IMG (jpeg, jpg, png, bmb)</label><br>
+                        <label>4.画像 (jpeg, jpg, png, bmb)</label><br>
                         <input type="file" name="thumbnail" value="{{old('thumbnail')}}" multiple="multiple"/>
                         {{ csrf_field() }}<br>
                     </div>
                     <div class="form-group">
-                        <label>5.YOUR NAME</label>
+                        <label>5.名前</label>
                         <input type="text" name="yourname"value="{{old('yourname')}}" rows="1" cols="1" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>6.YOUR EMAIL (Hidden. For delete.)</label>
+                        <label>6.メールアドレス (非表示)</label>
                         <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>8.DELETE PASSWORD (Max20. Hidden. For delete.)</label>
+                        <label>8.削除パスワード (20字以内。非表示。)</label>
                         <input type="text" name="youremail" value="{{old('youremail')}}" rows="1" cols="1" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label>9.CATEGORY</label>
+                        <label>9.登録カテゴリー</label>
                         <select class="form-control" id="category" name="category">
                         @foreach (\CategoryConst::CATEGORY_LIST as $name => $number)
                             <option value="{{ $name }}">{{ $number }} {{$name}}</option>
                         @endforeach
                     </div>
 
-                    <input type="submit" value="SUBMIT YOUR WEB SITE/PRODUCT/SERVICE" class="btn btn-primary" name="category">
+                    <input type="submit" value="登録" class="btn btn-primary" name="category">
                 </form>
 
                 <!-- center bottom -->
                 <div class="card-body">
-                    <p><a href="{{ route('task.toppage') }}" class="btn btn-link">Back to top</a></p>
+                    <p><a href="{{ route('task.toppage') }}" class="btn btn-link">トップに戻る</a></p>
                 </div>
             </div>
         </div>
@@ -269,7 +269,7 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-12">
-                <h3>CATEGORIES</h3>
+                <h3>登録カテゴリー一覧</h3>
             </div>
         </div>
     </div>
@@ -278,32 +278,32 @@
     <div class="container-fluid">
         <div class="row text-left" style="padding-left:100px">
             <div class="col-3">
-                <li> <a href="{{ route('task.toppageFood') }}">Food</a></li>
-                <li> <a href="{{ route('task.toppageTravel') }}">Travel</a></li>
-                <li> <a href="{{ route('task.toppageBeauty') }}">Beauty</a></li>
-                <li> <a href="{{ route('task.toppageCulture') }}">Culture</a></li>
-                <li> <a href="{{ route('task.toppageArt') }}">Art</a></li>
+                <li> <a href="{{ route('task.toppageFood') }}">食品</a></li>
+                <li> <a href="{{ route('task.toppageTravel') }}">旅行</a></li>
+                <li> <a href="{{ route('task.toppageBeauty') }}">美容</a></li>
+                <li> <a href="{{ route('task.toppageCulture') }}">文化</a></li>
+                <li> <a href="{{ route('task.toppageArt') }}">アート</a></li>
             </div>
             <div class="col-3">
-                <li> <a href="{{ route('task.toppageCharity') }}">Charity</a></li>
-                <li> <a href="{{ route('task.toppageBusiness') }}">Business</a></li>
-                <li> <a href="{{ route('task.toppageTvMovie') }}">TV_Movie</a></li>
-                <li> <a href="{{ route('task.toppageAutomobile') }}">Automobile</a></li>
-                <li> <a href="{{ route('task.toppageFinance') }}">Finance</a></li>
+                <li> <a href="{{ route('task.toppageCharity') }}">慈善活動</a></li>
+                <li> <a href="{{ route('task.toppageBusiness') }}">ビジネス</a></li>
+                <li> <a href="{{ route('task.toppageTvMovie') }}">テレビ・映画</a></li>
+                <li> <a href="{{ route('task.toppageAutomobile') }}">自動車・バイク等</a></li>
+                <li> <a href="{{ route('task.toppageFinance') }}">金融</a></li>
             </div>
             <div class="col-3">
-                <li> <a href="{{ route('task.toppageGame') }}">Game</a></li>
-                <li> <a href="{{ route('task.toppageLife') }}">Life</a></li>
-                <li> <a href="{{ route('task.toppageMedical') }}">Medical</a></li>
-                <li> <a href="{{ route('task.toppageMusic') }}">Music</a></li>
-                <li> <a href="{{ route('task.toppageHowTo') }}">How_to</a></li>
+                <li> <a href="{{ route('task.toppageGame') }}">ゲーム</a></li>
+                <li> <a href="{{ route('task.toppageLife') }}">生活</a></li>
+                <li> <a href="{{ route('task.toppageMedical') }}">医療</a></li>
+                <li> <a href="{{ route('task.toppageMusic') }}">音楽</a></li>
+                <li> <a href="{{ route('task.toppageHowTo') }}">ハウツー</a></li>
             </div>
             <div class="col-3">
-                <li> <a href="{{ route('task.toppageComputerMobile') }}">Computer_Mobile</a></li>
-                <li> <a href="{{ route('task.toppageScience') }}">Science</a></li>
-                <li> <a href="{{ route('task.toppageSports') }}">Sports</a></li>
+                <li> <a href="{{ route('task.toppageComputerMobile') }}">PC・モバイル</a></li>
+                <li> <a href="{{ route('task.toppageScience') }}">サイエンス</a></li>
+                <li> <a href="{{ route('task.toppageSports') }}">スポーツ</a></li>
                 <li> <a href="{{ route('task.toppageDiy') }}">DIY</a></li>
-                <li> <a href="{{ route('task.toppageBook') }}">Book</a></li>
+                <li> <a href="{{ route('task.toppageBook') }}">本</a></li>
             </div>
         </div>
     </div>
@@ -347,8 +347,8 @@
         <div class="row  text-center">
             <div class="col">
                 <!-- title -->
-                <br><h1 class="text-center">【Computer・Mobile】</h1><br>
-                <h1>REGISTERED WEBSITE</h1>
+                <br><h1 class="text-center">【PC・モバイル等】</h1><br>
+                <h1>登録済ウェブサイト</h1>
 
                 <!-- error msg -->
                 <div>
@@ -380,7 +380,7 @@
         <!-- main -->  
         <div class="col">
             <!-- agent check -->
-            <h6 class="text-center">Device: {{ $agent }}<h6>
+            <h6 class="text-center">端末: {{ $agent }}<h6>
                 <h5 style="text-decoration:underline">[How to delete?] Put your registered Email & Password</h5>
         </div>
     </div>
@@ -392,13 +392,13 @@
                 <table class="table table-dark table-borderless">
                     @foreach ($tasks as $task)
                         <tr>
-                            <th style="width: 100%; text-align:center;">TITLE</th>
+                            <th style="width: 100%; text-align:center;">タイトル</th>
                         </tr>
                         <tr>
                             <td>{{ $task->cname }}</td>
                         </tr>
                         <tr>
-                        <th style="width: 100%; text-align:center;">IMG</th>
+                        <th style="width: 100%; text-align:center;">画像</th>
                         </tr>
                         <td class="col-4">
                             @if ($task->thumbnail !=='')
@@ -408,7 +408,7 @@
                             @endif
                         </td>
                         <tr>
-                        <th style="width: 100%; text-align:center;">DESCRIPTION</th>
+                        <th style="width: 100%; text-align:center;">説明</th>
                         </tr>
                         <tr>
                             <td>{{ $task->description }}</td>
@@ -420,18 +420,18 @@
                             <td>{{ $task->url }}</td>
                         </tr>
                         <tr>
-                        <th style="width: 100%; text-align:center;">[Delete]</th>
+                        <th style="width: 100%; text-align:center;">[削除]</th>
                         </tr>
                         <tr>
                             <td>
                                 <form action="{{ route('task.delete')}}" method="POST">
                                     <div class="form-group">
-                                        <label style="font-size:9pt">YOUR EMAIL (Hidden)</label>
+                                        <label style="font-size:9pt">メールアドレス (非表示)</label>
                                         <input type="text" name="youremail" rows="1" cols="1" class="form-control">
                                     </div>
 
                                     <div class="form-group">
-                                        <label style="font-size:9pt">DELETE PWD (Hidden)</label>
+                                        <label style="font-size:9pt">削除用パスワード (非表示)</label>
                                         <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                                     </div>
                                     <input name="id" type="hidden" value="{{ $task->id }}">
@@ -465,9 +465,9 @@
     <div class="container-fluid">
         <div class="row  text-center" style="margin-bottom:50px; margin-top:150px">
             <div class="col">
-                <h1>REGISTRATION</h1>
-                <h6>Fill up bellow.</h6>
-                <h5 style="text-decoration:underline"> [Who can register?] Company, organization, individual, group whatsover!</h5>
+                <h1>登録はこちらから</h1>
+                <h6>以下を埋めてください。</h6>
+                <h5 style="text-decoration:underline">[各種登録可能] 企業, 組織, 個人, グループ等</h5>
             </div>
         </div>
     </div>
@@ -572,49 +572,49 @@
                     @csrf
                     <p></p>
                     <div class="form-group">
-                        <label>1.TITLE[40 charactors]</label>
+                        <label>1.タイトル[40文字以内]</label>
                         <input type="text" name="cname" rows="1" cols="1" value="{{old('cname')}}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>2.URL (Correct URL format)</label>
+                        <label>2.URL (正しいフォーマット)</label>
                         <textarea name="url" rows="1" cols="100" class="form-control" value="{{old('url')}}">{{old('url')}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label>3.Description (Max3000)</label>
+                        <label>3.説明 (3000文字以内)</label>
                         <textarea name="description" rows="5" cols="100" class="form-control"  value="{{old('url')}}">{{old('description')}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label>4.IMG (jpeg, jpg, png, bmb)</label><br>
+                        <label>4.画像 (jpeg, jpg, png, bmb)</label><br>
                         <input type="file" name="thumbnail" value="{{old('thumbnail')}}" multiple="multiple"/>
                         {{ csrf_field() }}<br>
                     </div>
                     <div class="form-group">
-                        <label>5.YOUR NAME</label>
+                        <label>5.名前</label>
                         <input type="text" name="yourname"value="{{old('yourname')}}" rows="1" cols="1" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>6.YOUR EMAIL (Hidden. For delete.)</label>
+                        <label>6.メールアドレス (非表示)</label>
                         <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>8.DELETE PASSWORD (Max20. Hidden. For delete.)</label>
+                        <label>8.削除用パスワード (20字以内。非表示。)</label>
                         <input type="text" name="youremail" value="{{old('youremail')}}" rows="1" cols="1" class="form-control">
                     </div>
 
                     <div class="form-group">
-                        <label>9.CATEGORY</label>
+                        <label>9.登録カテゴリー</label>
                         <select class="form-control" id="category" name="category">
                         @foreach (\CategoryConst::CATEGORY_LIST as $name => $number)
                             <option value="{{ $name }}">{{ $number }} {{$name}}</option>
                         @endforeach
                     </div>
 
-                    <input type="submit" value="SUBMIT YOUR WEB SITE/PRODUCT/SERVICE" class="btn btn-primary" name="category">
+                    <input type="submit" value="登録" class="btn btn-primary" name="category">
                 </form>
 
                 <!-- center bottom -->
                 <div class="card-body">
-                    <p><a href="{{ route('task.toppage') }}" class="btn btn-link">Back to top</a></p>
+                    <p><a href="{{ route('task.toppage') }}" class="btn btn-link">トップに戻る</a></p>
                 </div>
             </div>
         </div>
@@ -625,7 +625,7 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-12">
-                <h3>CATEGORIES</h3>
+                <h3>登録カテゴリー一覧</h3>
             </div>
         </div>
     </div>
@@ -634,11 +634,11 @@
     <div class="container-fluid">
         <div class="row text-left">
             <div class="col-12">
-                <li> <a href="{{ route('task.toppageFood') }}">Food</a></li>
-                <li> <a href="{{ route('task.toppageTravel') }}">Travel</a></li>
-                <li> <a href="{{ route('task.toppageBeauty') }}">Beauty</a></li>
-                <li> <a href="{{ route('task.toppageCulture') }}">Culture</a></li>
-                <li> <a href="{{ route('task.toppageArt') }}">Art</a></li>
+                <li> <a href="{{ route('task.toppageFood') }}">食品</a></li>
+                <li> <a href="{{ route('task.toppageTravel') }}">旅行</a></li>
+                <li> <a href="{{ route('task.toppageBeauty') }}">美容</a></li>
+                <li> <a href="{{ route('task.toppageCulture') }}">文化</a></li>
+                <li> <a href="{{ route('task.toppageArt') }}">アート</a></li>
             </div>
         </div>
     </div>
@@ -646,11 +646,11 @@
     <div class="container-fluid">
         <div class="row text-left">
             <div class="col-12">
-                <li> <a href="{{ route('task.toppageCharity') }}">Charity</a></li>
-                <li> <a href="{{ route('task.toppageBusiness') }}">Business</a></li>
-                <li> <a href="{{ route('task.toppageTvMovie') }}">TV_Movie</a></li>
-                <li> <a href="{{ route('task.toppageAutomobile') }}">Automobile</a></li>
-                <li> <a href="{{ route('task.toppageFinance') }}">Finance</a></li>
+                <li> <a href="{{ route('task.toppageCharity') }}">慈善活動</a></li>
+                <li> <a href="{{ route('task.toppageBusiness') }}">ビジネス</a></li>
+                <li> <a href="{{ route('task.toppageTvMovie') }}">TV・映画</a></li>
+                <li> <a href="{{ route('task.toppageAutomobile') }}">自動車・バイク等</a></li>
+                <li> <a href="{{ route('task.toppageFinance') }}">金融</a></li>
             </div>
         </div>
     </div>
@@ -658,22 +658,22 @@
     <div class="container-fluid">
         <div class="row text-left">
             <div class="col-12">
-                <li> <a href="{{ route('task.toppageGame') }}">Game</a></li>
-                <li> <a href="{{ route('task.toppageLife') }}">Life</a></li>
-                <li> <a href="{{ route('task.toppageMedical') }}">Medical</a></li>
-                <li> <a href="{{ route('task.toppageMusic') }}">Music</a></li>
-                <li> <a href="{{ route('task.toppageHowTo') }}">How_to</a></li>
+                <li> <a href="{{ route('task.toppageGame') }}">ゲーム</a></li>
+                <li> <a href="{{ route('task.toppageLife') }}">生活</a></li>
+                <li> <a href="{{ route('task.toppageMedical') }}">医療</a></li>
+                <li> <a href="{{ route('task.toppageMusic') }}">音楽</a></li>
+                <li> <a href="{{ route('task.toppageHowTo') }}">ハウツー</a></li>
             </div>
     
 
     <div class="container-fluid">
         <div class="row text-left">
             <div class="col-12">
-                <li> <a href="{{ route('task.toppageComputerMobile') }}">Computer_Mobile</a></li>
-                <li> <a href="{{ route('task.toppageScience') }}">Science</a></li>
-                <li> <a href="{{ route('task.toppageSports') }}">Sports</a></li>
+                <li> <a href="{{ route('task.toppageComputerMobile') }}">PC・モバイル等</a></li>
+                <li> <a href="{{ route('task.toppageScience') }}">サイエンス</a></li>
+                <li> <a href="{{ route('task.toppageSports') }}">スポーツ</a></li>
                 <li> <a href="{{ route('task.toppageDiy') }}">DIY</a></li>
-                <li> <a href="{{ route('task.toppageBook') }}">Book</a></li>
+                <li> <a href="{{ route('task.toppageBook') }}">本</a></li>
             </div>
         </div>
     </div>
