@@ -71,7 +71,7 @@ mkdir -p storage/framework/views
 8. .env編集
 APP_NAME=Axelrod-BBS-CORE
 APP_ENV=public
-APP_KEY=base64:hlwHqlEMjeVQkGM973ml1s+q7UbxbzFPo/cEV+pyy74=
+APP_KEY=base64:M7UBJaAKxSiU9r2SIpQ5Yj6phB6P/iBcwV8DyzN3k4E=
 APP_DEBUG=false
 APP_URL=https://axelrod/Axelrod-BBS-BASE
 DB_CONNECTION=mysql
@@ -89,10 +89,19 @@ DB_PASSWORD=Webpassw0rd1
 
 10. シンボリックリンク作成
 ln -s /home/{FTPアカウント名}/{laravelプロジェクト名}/public /home/{FTPアカウント名}/www/{シンボリックリンク名}
-ln -s /home/axelrod/Axelrod-BBS-CORE/public /home/axelrod/www/Axelrod-BBS-CORE
+ln -s /home/axelrod/BBS-Bear-jp/public /home/axelrod/www/BBS-Bear-jp
 
 11. strage link作成して画像表示
 - php artisan storage:link
 
+12. https化
+https://rapicro.com/laravel%E3%81%AEroute%E3%81%8Chttp%E3%81%AB%E3%81%AA%E3%82%8B%E3%80%90https%E5%8C%96%E3%80%91/
+app/Providers/AppServiceProvider.php 
+use Illuminate\Support\Facades\App; // 追加
+use Illuminate\Support\Facades\URL; // 追加
+public function boot() {
+    if (App::environment('production','staging')) {
+        URL::forceScheme('https');
+    }
 APP:simplebbs
-ver2.00
+ver2.00-ja
