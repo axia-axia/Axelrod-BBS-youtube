@@ -45,17 +45,22 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family:'Times New Roman', Times, serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+footer{
+  background-color: #000;
+  height:350px;
+  color:white;
 }
 
 article,
 aside,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -66,7 +71,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family:'Times New Roman', Times, serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -242,6 +247,8 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
+  font-weight:bolder;
+  font-size: large;
 }
 
 button {
@@ -258,7 +265,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family:'Times New Roman', Times, serif;
   font-size: inherit;
   line-height: inherit;
 }
@@ -1834,23 +1841,23 @@ pre code {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #c6e0f5;
+  background-color: #000000;
 }
 
 .table-primary th,
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #95c5ed;
+  border-color: #000000;
 }
 
 .table-hover .table-primary:hover {
-  background-color: #b0d4f1;
+  background-color: #000000;
 }
 
 .table-hover .table-primary:hover > td,
 .table-hover .table-primary:hover > th {
-  background-color: #b0d4f1;
+  background-color: #000000;
 }
 
 .table-secondary,
@@ -2694,37 +2701,37 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #227dc7;
-  border-color: #2176bd;
+  background-color: #003c6c;
+  border-color: #003c6c;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #227dc7;
-  border-color: #2176bd;
+  background-color: #003c6c;
+  border-color: #003c6c;
   box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
 }
 
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
+  background-color: #002746;
+  border-color: #002746;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #2176bd;
-  border-color: #1f6fb2;
+  background-color: #002746;
+  border-color: #002746;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -6432,7 +6439,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family:'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -10603,7 +10610,7 @@ button.bg-dark:focus {
 }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .text-justify {

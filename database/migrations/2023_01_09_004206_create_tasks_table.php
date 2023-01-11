@@ -24,7 +24,7 @@ class CreateTasksTable extends Migration
             $table->text('yourname');
             $table->text('youremail');
             $table->text('delete_pass');
-            $table->unsignedBigInteger('category_id'); 
+            $table->text('category_id'); 
         });
     }
 

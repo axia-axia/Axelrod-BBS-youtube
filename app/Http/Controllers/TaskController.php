@@ -431,10 +431,7 @@ class TaskController extends Controller
         $tasks = Task::get();
         $cnt_array = array();
 
-        // カテゴリ選択　（追加）
-        $categories = config('category');
-        
-        return view('task.toppage', compact('tasks','cnt_array', 'agent', 'categories'));
+        return view('task.toppage', compact('tasks','cnt_array', 'agent'));
     }
     
     public function create(Request $request)
@@ -450,25 +447,21 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        // カテゴリ選択　（追加）
-        $categories = config('category');
-    
 
-        return view('task.create', compact('agent','categories'));
+        return view('task.create', compact('agent'));
     }
 
     public function store(Request $request)
     {
         // validation
         $this->validate($request, [
-            // 'category_id' => 'required',
             'cname' => 'required|max:40|regex:/^[^#<>^;_]*$/',
             'url' => 'required|url',
             'description' => 'required|max:3000|regex:/^[^#<>^;_]*$/',
             'thumbnail' => 'required|file|mimes:jpeg,png,jpg,bmb|max:2048',
             'yourname' => 'required|max:40|regex:/^[^#<>^;_]*$/',
-            'youremail' => 'required|email:filter,dns',
-            'delete_pass' => 'required',
+            // 'youremail' => 'required|email:filter,dns',
+            // 'delete_pass' => 'required',
             ],
             [
             'cname.required' => '[Channel name] Required.',
@@ -485,10 +478,10 @@ class TaskController extends Controller
             'thumbnail.max'  => '[Thumbnail] max size 2048',
             'yourname.required' => '[Your name] Required.',
             'yourname.max' => '[Your name] Max40.',
-            'yourname.regex' => '[Your name] Cant use special charactors.',
-            'youremail.required' => '[Your Email] Required.',
-            'youremail.email:filter,dns' => '[Your Email] Need correct format.',
-            'delete_pass.required' => '[Delete password] Required.',
+            // 'yourname.regex' => '[Your name] Cant use special charactors.',
+            // 'youremail.required' => '[Your Email] Required.',
+            // 'youremail.email:filter,dns' => '[Your Email] Need correct format.',
+            // 'delete_pass.required' => '[Delete password] Required.',
             ]);
 
         $task = new Task();
@@ -535,6 +528,17 @@ class TaskController extends Controller
 
     public function delete(Request $request)
     {
+        // // validation
+        // $this->validate($request, [
+        //     'delete_pass' => 'required',
+        //     'youremail' => 'required|email:filter,dns',
+        //     ],
+        //     [ 
+        //     'youremail.required' => '[Your Email] Required.',
+        //     'youremail.email:filter,dns' => '[Your Email] Need correct format.',
+        //     'delete_pass.required' => '[Delete password] Required.',
+        //     ]);
+
         Task::where('id', $request->id)->delete();
         $tasks = Task::get();
 
@@ -549,7 +553,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        return view('task.myindex', compact('tasks','agent'));
+        return view('task.toppage', compact('tasks','agent'));
     }
 
 }

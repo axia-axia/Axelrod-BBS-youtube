@@ -20,11 +20,7 @@
         }
     </script>
     
-    <!-- grid -->
-    <!-- 5rows -->
-    <!-- ********************************************* -->
     <!-- 　                 　　 PC                     -->
-    <!-- ********************************************* -->
 
     @if($agent ==='pc')
         
@@ -32,7 +28,7 @@
     <div class="row  text-center">
         <div class="col">
             <h3>CHANNEL CATEGORIES</h3>
-            <h6>※ You can register over multi categories as much as you want!!</h6>
+            <h6>You can register to other categories too.</h6>
         </div>
     </div>
     
@@ -86,8 +82,8 @@
         <div class="col">
             <!-- title -->
             <hr>
-            <h1>SUBMITTED SUCESSFULLY!!</h1>
-            <h6>※ You can boost more your channels registering to other  categories!</h6>
+            <h1>REGISTERED!</h1>
+            <h6></h6>
             <hr>
         </div>
     </div>
@@ -113,8 +109,7 @@
         <div class="col-8">
             <!-- center upper -->
             <div class="card-body text-center">
-                <p><a href="{{ route('task.create') }}" class="btn btn-outline-success">Creat new</a></p>
-                <p><a href="{{ route('task.toppage') }}" class="btn btn-link">MyPage</a></p>
+                <p><a href="{{ route('task.toppage') }}" class="btn btn-link">Back to Top page</a></p>
             </div>
         </div>
         <div class="col-2">
@@ -139,9 +134,7 @@
 
     
     
-    <!-- ********************************************* -->
     <!-- 　                  mobile                     -->
-    <!-- ********************************************* -->
     @else        
         <table class="table">
             <!-- adv top -->
@@ -155,8 +148,8 @@
 
             <!-- title -->
             <tr>
-                <h1 style="text-align:center">SUBMITTED SUCESSFULLY!!</h1>
-                <h6>※Boost more your channels to other categories!!</h6>
+                <h1 style="text-align:center">REGISTERED!</h1>
+                <h6>You can register to other categories too.</h6>
             </tr><br><br>
 
             <!-- adv left -->
@@ -169,11 +162,9 @@
             </tr><br><br>
 
              <!-- menu -->
-            <hr>
-            <h3 style="text-align:center">Menu</h3>
-            <hr>
-            <tr><a href="{{ route('task.create') }}" class="btn btn-primary">Creat new</a></tr><br><br>
-            <tr><a href="{{ route('task.toppage') }}">MyPage</a></tr><br><br>
+
+            <tr><a href="{{ route('task.toppage') }}" class="btn btn-primary">Register more to the other categories</a></tr><br><br>
+            <tr><a href="{{ route('task.toppage') }}">Back to Top page</a></tr><br><br>
 
         </table>
     @endif

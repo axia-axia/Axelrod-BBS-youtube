@@ -190,6 +190,9 @@ return [
 
     'aliases' => [
 
+        // 定数系
+        'CategoryConst' =>  App\Consts\CategoryConst::class,
+
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

@@ -15,17 +15,16 @@ class Task extends Model
         'thumbnail',
         'yourname',
         'youremail',
-        'delete_pass'
+        'delete_pass',
+        'category_id'
     ];
-    // configからカテゴリ取得関数 ref :https://qiita.com/masakichi_eng/items/b9948f7d14de793dc014
-      public function getCategoryName()
-      {
-          return config('category.'.$this->category_id);
-      }
+
 
       public function category()
       {
           return $this->belongsTo('App\Category');
       }   
+
+
        
 }
