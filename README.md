@@ -95,4 +95,4 @@ ln -s /home/axelrod/Axelrod-BBS-CORE/public /home/axelrod/www/Axelrod-BBS-CORE
 - php artisan storage:link
 
 APP:simplebbs
-ver1.01
+ver2.00

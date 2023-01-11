@@ -53,9 +53,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-2">
-                <!-- adv left -->
                 <!-- admax -->
-                <script src="https://adm.shinobi.jp/s/6f18cf5c29638a99d9b905873c7c3b68"></script>
+                <script src="https://adm.shinobi.jp/s/fec9148c38c1c05759e417de0f29ea63"></script>
                 <!-- admax -->
             </div>
             <div class="col-8">
@@ -107,7 +106,7 @@
             <div class="col-2">
                 <!-- right adv -->
                 <!-- admax -->
-                <script src="https://adm.shinobi.jp/s/6f18cf5c29638a99d9b905873c7c3b68"></script>
+                <script src="https://adm.shinobi.jp/s/fec9148c38c1c05759e417de0f29ea63"></script>
                 <!-- admax -->
             </div>
         </div>
@@ -314,7 +313,7 @@
         <div class="row  text-center">
             <div class="col-12">
                 <!-- admax -->
-                <script src="https://adm.shinobi.jp/s/38d3ef270b2c7117753b56cd85fa9297"></script>
+                <script src="https://adm.shinobi.jp/s/42491d2ae5461922577203e25e507c59"></script>
                 <!-- admax -->
             </div>
         </div>
@@ -452,7 +451,7 @@
             <div class="col-2">
                 <!-- right adv -->
                 <!-- admax -->
-                <script src="https://adm.shinobi.jp/s/6f18cf5c29638a99d9b905873c7c3b68"></script>
+                <script src="https://adm.shinobi.jp/s/a39718b74daa16f032a8b3b00b456f49"></script>
                 <!-- admax -->
             </div>
         </div>
@@ -553,8 +552,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2">
-                <!-- adv left -->
+            <div class="col-12">
                 <!-- admax -->
                 <script src="https://adm.shinobi.jp/s/a39718b74daa16f032a8b3b00b456f49"></script>
                 <!-- admax -->
