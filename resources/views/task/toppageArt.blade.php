@@ -59,6 +59,9 @@
             </div>
             <div class="col-8">
                 <!-- center upper -->
+                @if ($error_msg)
+                <p>{{ $error_msg }}</p>
+                @endif
                 <table class="table table-dark table-borderless">
                     <thead>
                         <tr>
@@ -66,6 +69,7 @@
                             <th style="width: 20%">タイトル</th>
                             <th style="width: 30%">説明</th>
                             <th style="width: 10%">URL</th>
+                            <th style="width: 10%">カテゴリ</th>
                             <th style="width: 20%">[削除]</th>
                         </tr>
                     </thead>
@@ -82,19 +86,21 @@
                             <td>{{ $task->cname }}</td>
                             <td>{{ $task->description }}</td>
                             <td>{{ $task->url }}</td>
+                            <td>{{ $task->category_id }}</td>
                             <td>
                                 <form action="{{ route('task.delete')}}" method="POST">
+                                @csrf
                                     <div class="form-group">
-                                        <label style="font-size:9pt">メールアドレス (非表示)</label>
+                                        <label style="font-size:9pt">メールアドレス</label>
                                         <input type="text" name="youremail" rows="1" cols="1" class="form-control">
                                     </div>
 
                                     <div class="form-group">
-                                        <label style="font-size:9pt">削除パスワード (非表示)</label>
+                                        <label style="font-size:9pt">削除パスワード</label>
                                         <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                                     </div>
                                     <input name="id" type="hidden" value="{{ $task->id }}">
-                                    <input type="submit" value="DELETE" class="btn btn-primary" name="delete">
+                                    <input type="submit" value="削除" class="btn btn-primary" name="delete">
                                 </form>
                             </td>
                         </tr>
@@ -425,17 +431,18 @@
                         <tr>
                             <td>
                                 <form action="{{ route('task.delete')}}" method="POST">
+                                @csrf
                                     <div class="form-group">
-                                        <label style="font-size:9pt">メールアドレス (非表示)</label>
+                                        <label style="font-size:9pt">メールアドレス</label>
                                         <input type="text" name="youremail" rows="1" cols="1" class="form-control">
                                     </div>
 
                                     <div class="form-group">
-                                        <label style="font-size:9pt">削除用パスワード (非表示)</label>
+                                        <label style="font-size:9pt">削除用パスワード</label>
                                         <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                                     </div>
                                     <input name="id" type="hidden" value="{{ $task->id }}">
-                                    <input type="submit" value="DELETE" class="btn btn-primary" name="delete">
+                                    <input type="submit" value="削除" class="btn btn-primary" name="delete">
                                 </form>
                             </td>
                         </tr>

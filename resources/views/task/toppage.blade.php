@@ -44,8 +44,8 @@
         <!-- main -->  
         <div class="col">
             <!-- agent check -->
-            <h6 class="text-center">Device: {{ $agent }}<h6>
-                <h5 style="text-decoration:underline">[How to delete?] Put your registered Email & Password</h5>
+            <h6 class="text-center">端末: {{ $agent }}<h6>
+                <h5 style="text-decoration:underline">[削除方法] 登録メールアドレスと削除パスワードを入力して下さい。</h5>
         </div>
     </div>
 
@@ -59,6 +59,9 @@
             </div>
             <div class="col-8">
                 <!-- center upper -->
+                @if ($error_msg)
+                <p>{{ $error_msg }}</p>
+                @endif
                 <table class="table table-dark table-borderless">
                     <thead>
                         <tr>
@@ -66,6 +69,7 @@
                             <th style="width: 20%">タイトル</th>
                             <th style="width: 30%">説明</th>
                             <th style="width: 10%">URL</th>
+                            <th style="width: 10%">カテゴリ</th>
                             <th style="width: 20%">[削除]</th>
                         </tr>
                     </thead>
@@ -82,19 +86,21 @@
                             <td>{{ $task->cname }}</td>
                             <td>{{ $task->description }}</td>
                             <td>{{ $task->url }}</td>
+                            <td>{{ $task->category_id }}</td>
                             <td>
                                 <form action="{{ route('task.delete')}}" method="POST">
+                                @csrf
                                     <div class="form-group">
-                                        <label style="font-size:9pt">メールアドレス (非表示)</label>
+                                        <label style="font-size:9pt">メールアドレス</label>
                                         <input type="text" name="youremail" rows="1" cols="1" class="form-control">
                                     </div>
 
                                     <div class="form-group">
-                                        <label style="font-size:9pt">削除パスワード (非表示)</label>
+                                        <label style="font-size:9pt">削除パスワード</label>
                                         <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                                     </div>
                                     <input name="id" type="hidden" value="{{ $task->id }}">
-                                    <input type="submit" value="DELETE" class="btn btn-primary" name="delete">
+                                    <input type="submit" value="削除" class="btn btn-primary" name="delete">
                                 </form>
                             </td>
                         </tr>
@@ -120,7 +126,7 @@
         <div class="row  text-center" style="margin-bottom:50px; margin-top:150px">
             <div class="col">
                 <h1>登録</h1>
-                <h6>Fill up bellow.</h6>
+                <h6>全ての項目をご記入ください。</h6>
                 <h5 style="text-decoration:underline"> [各種登録可能] 企業, 組織, 個人, グループ等</h5>
             </div>
         </div>
@@ -225,7 +231,7 @@
                     </div>
                     <div class="form-group">
                         <label>3.説明 (3000文字以内)</label>
-                        <textarea name="description" rows="5" cols="100" class="form-control"  value="{{old('url')}}">{{old('description')}}</textarea>
+                        <textarea name="description" rows="5" cols="100" class="form-control"  value="{{old('description')}}">{{old('description')}}</textarea>
                     </div>
                     <div class="form-group">
                         <label>4.画像 (jpeg, jpg, png, bmb)</label><br>
@@ -238,13 +244,12 @@
                     </div>
                     <div class="form-group">
                         <label>6.メールアドレス (非表示)</label>
-                        <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
+                        <input type="text" name="youremail" value="{{old('youremail')}}" rows="1" cols="1" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>8.削除パスワード (20字以内。非表示。)</label>
-                        <input type="text" name="youremail" value="{{old('youremail')}}" rows="1" cols="1" class="form-control">
+                        <input type="text" name="delete_pass" rows="1" cols="1" class="form-control">
                     </div>
-
                     <div class="form-group">
                         <label>9.登録カテゴリー</label>
                         <select class="form-control" id="category" name="category">
@@ -253,7 +258,7 @@
                         @endforeach
                     </div>
 
-                    <input type="submit" value="登録" class="btn btn-primary" name="category">
+                    <input type="submit" value="登録" class="btn btn-primary">
                 </form>
 
                 <!-- center bottom -->
@@ -424,6 +429,7 @@
                         <tr>
                             <td>
                                 <form action="{{ route('task.delete')}}" method="POST">
+                                @csrf
                                     <div class="form-group">
                                         <label style="font-size:9pt">メールアドレス (非表示)</label>
                                         <input type="text" name="youremail" rows="1" cols="1" class="form-control">

@@ -25,6 +25,7 @@ class CategoryConst
     const CATEGORY_SPORTS = 17;
     const CATEGORY_DIY = 18;
     const CATEGORY_BOOK = 19;
+    const CATEGORY_MENTALMIND = 20;
     const CATEGORY_LIST = [
         '食品' => self::CATEGORY_FOOD,
         '旅行' => self::CATEGORY_TRAVEL,
@@ -46,5 +47,6 @@ class CategoryConst
         'スポーツ' => self::CATEGORY_SPORTS,
         'DIY' => self::CATEGORY_DIY,
         '本' => self::CATEGORY_BOOK,
+        'メンタル・マインド' => self::CATEGORY_MENTALMIND,
     ];
 }

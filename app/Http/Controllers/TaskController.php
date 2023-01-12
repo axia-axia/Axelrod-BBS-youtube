@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
 
 class TaskController extends Controller
 {
@@ -28,10 +29,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 1)->get();
+        $tasks = Task::where('category_id', '食品')->get();
         $name = Auth::user();
     
-        return view('task.toppageFood', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageTravel(Request $request)
@@ -47,10 +50,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 2)->get();
+        $tasks = Task::where('category_id', '旅行')->get();
         $name = Auth::user();
     
-        return view('task.toppageTravel', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageLife(Request $request)
@@ -66,10 +71,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 3)->get();
+        $tasks = Task::where('category_id',  '生活')->get();
         $name = Auth::user();
     
-        return view('task.toppageLife', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageBeauty(Request $request)
@@ -85,10 +92,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 4)->get();
+        $tasks = Task::where('category_id', '美容')->get();
         $name = Auth::user();
     
-        return view('task.toppageBeauty', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageFinance(Request $request)
@@ -104,10 +113,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 5)->get();
+        $tasks = Task::where('category_id', '金融')->get();
         $name = Auth::user();
     
-        return view('task.toppageFinance', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageArt(Request $request)
@@ -123,10 +134,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 6)->get();
+        $tasks = Task::where('category_id', 'アート')->get();
         $name = Auth::user();
     
-        return view('task.toppageArt', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageCulture(Request $request)
@@ -142,10 +155,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 7)->get();
+        $tasks = Task::where('category_id', '文化')->get();
         $name = Auth::user();
     
-        return view('task.toppageCulture', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageAutomobile(Request $request)
@@ -161,10 +176,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 8)->get();
+        $tasks = Task::where('category_id', '自動車・バイク等')->get();
         $name = Auth::user();
     
-        return view('task.toppageAutomobile', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageMedical(Request $request)
@@ -180,10 +197,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 9)->get();
+        $tasks = Task::where('category_id', '医療')->get();
         $name = Auth::user();
     
-        return view('task.toppageMedical', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageMusic(Request $request)
@@ -199,10 +218,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 10)->get();
+        $tasks = Task::where('category_id', '音楽')->get();
         $name = Auth::user();
     
-        return view('task.toppageMusic', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageBusiness(Request $request)
@@ -218,10 +239,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 11)->get();
+        $tasks = Task::where('category_id', 'ビジネス')->get();
         $name = Auth::user();
     
-        return view('task.toppageBusiness', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageBook(Request $request)
@@ -237,10 +260,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 12)->get();
+        $tasks = Task::where('category_id', '本')->get();
         $name = Auth::user();
     
-        return view('task.toppageBook', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageComputerMobile(Request $request)
@@ -256,10 +281,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 13)->get();
+        $tasks = Task::where('category_id', 'PC・モバイル等')->get();
         $name = Auth::user();
     
-        return view('task.toppageComputerMobile', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageGame(Request $request)
@@ -275,10 +302,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 14)->get();
+        $tasks = Task::where('category_id', 'ゲーム')->get();
         $name = Auth::user();
     
-        return view('task.toppageGame', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageMentalmind(Request $request)
@@ -294,10 +323,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 15)->get();
+        $tasks = Task::where('category_id', 'メンタル・マインド')->get();
         $name = Auth::user();
     
-        return view('task.toppageMentalmind', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageHowTo(Request $request)
@@ -313,10 +344,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 16)->get();
+        $tasks = Task::where('category_id', 'ハウツー')->get();
         $name = Auth::user();
     
-        return view('task.toppageHowTo', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageDiy(Request $request)
@@ -332,10 +365,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 17)->get();
+        $tasks = Task::where('category_id', 'DIY')->get();
         $name = Auth::user();
     
-        return view('task.toppageDiy', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageSports(Request $request)
@@ -351,10 +386,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 18)->get();
+        $tasks = Task::where('category_id', 'スポーツ')->get();
         $name = Auth::user();
     
-        return view('task.toppageSports', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageScience(Request $request)
@@ -370,10 +407,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 18)->get();
+        $tasks = Task::where('category_id', 'サイエンス')->get();
         $name = Auth::user();
     
-        return view('task.toppageScience', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //Food threads
     public function toppageTvMovie(Request $request)
@@ -392,7 +431,9 @@ class TaskController extends Controller
         $tasks = Task::where('category_id', 19)->get();
         $name = Auth::user();
     
-        return view('task.toppageTvMovie', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
 
     //Food threads
@@ -409,10 +450,12 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 21)->get();
+        $tasks = Task::where('category_id', '慈善活動')->get();
         $name = Auth::user();
     
-        return view('task.toppageCharity', compact('tasks','name','agent'));
+        $error_msg = "";
+
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
     //all threads
     public function toppage(Request $request)
@@ -432,24 +475,9 @@ class TaskController extends Controller
         $tasks = Task::get();
         $cnt_array = array();
 
-        return view('task.toppage', compact('tasks','cnt_array', 'agent'));
-    }
-    
-    public function create(Request $request)
-    {
-        // agent check (pc or mobile)
-        //端末判断
-        $user_agent =  $request->header('User-Agent');
-        if ((strpos($user_agent, 'iPhone') !== false)
-            || (strpos($user_agent, 'iPod') !== false)
-            || (strpos($user_agent, 'Android') !== false)) {
-            $agent ='mobile';
-        } else {
-            $agent = 'pc';
-        }
+        $error_msg = "";
 
-
-        return view('task.create', compact('agent'));
+        return view('task.toppage', compact('tasks', 'agent', 'error_msg'));
     }
 
     public function store(Request $request)
@@ -540,21 +568,52 @@ class TaskController extends Controller
             'delete_pass.required' => '[Delete password] Required.',
             ]);
 
-        Task::where('id', $request->id)->delete();
-        $tasks = Task::get();
+            Log::debug($request->id);
+        // email and delete pass check
+        $task = DB::table('tasks')->where('id', $request->id)->first();
+        Log::debug($request->youremail);
+        Log::debug($request->delete_pass);
+        Log::debug($task->youremail);
+        Log::debug($task->delete_pass);
+        if ($request->youremail == $task->youremail && $request->delete_pass == $task->delete_pass){
+            Task::where('id', $request->id)->delete();
+            $tasks = Task::get();
+            // agent check (pc or mobile)
+            //端末判断
+            //削除してリターン
+            $user_agent =  $request->header('User-Agent');
+            if ((strpos($user_agent, 'iPhone') !== false)
+                || (strpos($user_agent, 'iPod') !== false)
+                || (strpos($user_agent, 'Android') !== false)) {
+                $agent ='mobile';
+            } else {
+                $agent = 'pc';
+            }
+            $error_msg = "削除しました。";
+            return view('task.toppage', compact('tasks','agent', 'error_msg'));
 
-        // agent check (pc or mobile)
-        //端末判断
-        $user_agent =  $request->header('User-Agent');
-        if ((strpos($user_agent, 'iPhone') !== false)
-            || (strpos($user_agent, 'iPod') !== false)
-            || (strpos($user_agent, 'Android') !== false)) {
-            $agent ='mobile';
         } else {
-            $agent = 'pc';
+            // agent check (pc or mobile)
+            //端末判断
+            //削除せずにリターン
+            $user_agent =  $request->header('User-Agent');
+            if ((strpos($user_agent, 'iPhone') !== false)
+                || (strpos($user_agent, 'iPod') !== false)
+                || (strpos($user_agent, 'Android') !== false)) {
+                $agent ='mobile';
+            } else {
+                $agent = 'pc';
+            }
+            $tasks = Task::get();
+            $error_msg = "【エラー】登録メールアドレス又は削除パスワードが異なります。";
+            return view('task.toppage', compact('tasks','agent', 'error_msg'));
+
         }
 
-        return view('task.toppage', compact('tasks','agent'));
+
+        
+
+        
     }
 
 }
