@@ -104,4 +104,4 @@ public function boot() {
         URL::forceScheme('https');
     }
 APP:simplebbs
-ver2.01-ja
+ver2.00-en

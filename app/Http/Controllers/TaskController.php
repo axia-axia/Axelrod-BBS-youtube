@@ -29,7 +29,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '食品')->get();
+        $tasks = Task::where('category_id', 'Food')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -50,7 +50,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '旅行')->get();
+        $tasks = Task::where('category_id', 'Travel')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -71,7 +71,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id',  '生活')->get();
+        $tasks = Task::where('category_id',  'Life')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -92,7 +92,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '美容')->get();
+        $tasks = Task::where('category_id', 'Beauty')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -113,7 +113,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '金融')->get();
+        $tasks = Task::where('category_id', 'Finance')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -134,7 +134,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'アート')->get();
+        $tasks = Task::where('category_id', 'Art')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -155,7 +155,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '文化')->get();
+        $tasks = Task::where('category_id', 'Culture')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -176,7 +176,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '自動車・バイク等')->get();
+        $tasks = Task::where('category_id', 'Automobile')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -197,7 +197,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '医療')->get();
+        $tasks = Task::where('category_id', 'Medical')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -218,7 +218,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '音楽')->get();
+        $tasks = Task::where('category_id', 'Music')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -239,7 +239,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'ビジネス')->get();
+        $tasks = Task::where('category_id', 'Business')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -260,7 +260,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '本')->get();
+        $tasks = Task::where('category_id', 'Books')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -281,7 +281,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'PC・モバイル等')->get();
+        $tasks = Task::where('category_id', 'Computer・Mobilephone etc')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -302,7 +302,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'ゲーム')->get();
+        $tasks = Task::where('category_id', 'Game')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -323,7 +323,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'メンタル・マインド')->get();
+        $tasks = Task::where('category_id', 'Mental・Mind')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -344,7 +344,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'ハウツー')->get();
+        $tasks = Task::where('category_id', 'How-to')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -386,7 +386,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'スポーツ')->get();
+        $tasks = Task::where('category_id', 'Sports')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -407,7 +407,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 'サイエンス')->get();
+        $tasks = Task::where('category_id', 'Science')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -428,7 +428,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', 19)->get();
+        $tasks = Task::where('category_id', 'TV・Movies')->get();
         $name = Auth::user();
     
         $error_msg = "";
@@ -450,7 +450,7 @@ class TaskController extends Controller
             $agent = 'pc';
         }
 
-        $tasks = Task::where('category_id', '慈善活動')->get();
+        $tasks = Task::where('category_id', 'Charity')->get();
         $name = Auth::user();
     
         $error_msg = "";

@@ -27,40 +27,40 @@
     <!-- row1 -->
     <div class="row  text-center">
         <div class="col">
-            <h3>登録カテゴリー一覧</h3>
-            <h6>その他の該当カテゴリーにも登録可能です。</h6>
+            <h3>CATEGORIES</h3>
+            <h6>You can register to other suitable categories bellow.</h6>
         </div>
     </div>
     
     <!-- row2 -->
     <div class="row text-center">
         <div class="col-3">
-            <li> <a href="{{ route('task.toppageFood') }}">食品</a></li>
-            <li> <a href="{{ route('task.toppageTravel') }}">旅行</a></li>
-            <li> <a href="{{ route('task.toppageBeauty') }}">美容</a></li>
-            <li> <a href="{{ route('task.toppageCulture') }}">文化</a></li>
-            <li> <a href="{{ route('task.toppageArt') }}">アート</a></li>
+            <li> <a href="{{ route('task.toppageFood') }}">Food</a></li>
+            <li> <a href="{{ route('task.toppageTravel') }}">Travel</a></li>
+            <li> <a href="{{ route('task.toppageBeauty') }}">Beauty</a></li>
+            <li> <a href="{{ route('task.toppageCulture') }}">Culture</a></li>
+            <li> <a href="{{ route('task.toppageArt') }}">Art</a></li>
         </div>
         <div class="col-3">
-            <li> <a href="{{ route('task.toppageCharity') }}">慈善活動</a></li>
-            <li> <a href="{{ route('task.toppageBusiness') }}">ビジネス</a></li>
-            <li> <a href="{{ route('task.toppageTvMovie') }}">テレビ・映画</a></li>
-            <li> <a href="{{ route('task.toppageAutomobile') }}">自動車・バイク等</a></li>
-            <li> <a href="{{ route('task.toppageFinance') }}">金融</a></li>
+            <li> <a href="{{ route('task.toppageCharity') }}">Charity</a></li>
+            <li> <a href="{{ route('task.toppageBusiness') }}">Business</a></li>
+            <li> <a href="{{ route('task.toppageTvMovie') }}">TV・Movies</a></li>
+            <li> <a href="{{ route('task.toppageAutomobile') }}">Automobile</a></li>
+            <li> <a href="{{ route('task.toppageFinance') }}">Finance</a></li>
         </div>
         <div class="col-3">
-            <li> <a href="{{ route('task.toppageGame') }}">ゲーム</a></li>
-            <li> <a href="{{ route('task.toppageLife') }}">生活</a></li>
-            <li> <a href="{{ route('task.toppageMedical') }}">医療</a></li>
-            <li> <a href="{{ route('task.toppageMusic') }}">音楽</a></li>
-            <li> <a href="{{ route('task.toppageHowTo') }}">ハウツー</a></li>
+            <li> <a href="{{ route('task.toppageGame') }}">Game</a></li>
+            <li> <a href="{{ route('task.toppageLife') }}">Life</a></li>
+            <li> <a href="{{ route('task.toppageMedical') }}">Medical</a></li>
+            <li> <a href="{{ route('task.toppageMusic') }}">Music</a></li>
+            <li> <a href="{{ route('task.toppageHowTo') }}">How-to</a></li>
         </div>
         <div class="col-3">
-            <li> <a href="{{ route('task.toppageComputerMobile') }}">PC・モバイル</a></li>
-            <li> <a href="{{ route('task.toppageScience') }}">サイエンス</a></li>
-            <li> <a href="{{ route('task.toppageSports') }}">スポーツ</a></li>
+            <li> <a href="{{ route('task.toppageComputerMobile') }}">Computer・Mobilephone etc</a></li>
+            <li> <a href="{{ route('task.toppageScience') }}">Science</a></li>
+            <li> <a href="{{ route('task.toppageSports') }}">Sports</a></li>
             <li> <a href="{{ route('task.toppageDiy') }}">DIY</a></li>
-            <li> <a href="{{ route('task.toppageBook') }}">本</a></li>
+            <li> <a href="{{ route('task.toppageBook') }}">Books</a></li>
         </div>
     </div>
 
@@ -82,7 +82,7 @@
         <div class="col">
             <!-- title -->
             <hr>
-            <h1>登録完了!</h1>
+            <h1>Registered!</h1>
             <h6></h6>
             <hr>
         </div>
@@ -93,7 +93,7 @@
         <!-- main -->  
         <div class="col">
             <!-- agent check -->
-            <h6 class="text-center">端末: {{ $agent }}<h6>
+            <h6 class="text-center">Device: {{ $agent }}<h6>
             
         </div>
     </div>
@@ -109,7 +109,7 @@
         <div class="col-8">
             <!-- center upper -->
             <div class="card-body text-center">
-                <p><a href="{{ route('task.toppage') }}" class="btn btn-link">トップに戻る</a></p>
+                <p><a href="{{ route('task.toppage') }}" class="btn btn-link">Back to Top page</a></p>
             </div>
         </div>
         <div class="col-2">
@@ -148,8 +148,8 @@
 
             <!-- title -->
             <tr>
-                <h1 style="text-align:center">登録完了!</h1>
-                <h6>その他の該当カテゴリーにも登録可能です。</h6>
+                <h1 style="text-align:center">Registered!</h1>
+                <h6>You can register to other suitable categories bellow.</h6>
             </tr><br><br>
 
             <!-- adv left -->
@@ -163,8 +163,8 @@
 
              <!-- menu -->
 
-            <tr><a href="{{ route('task.toppage') }}" class="btn btn-primary">その他のカテゴリーに登録する</a></tr><br><br>
-            <tr><a href="{{ route('task.toppage') }}">トップに戻る</a></tr><br><br>
+            <tr><a href="{{ route('task.toppage') }}" class="btn btn-primary">Registere to other category</a></tr><br><br>
+            <tr><a href="{{ route('task.toppage') }}">Back to Top page.</a></tr><br><br>
 
         </table>
     @endif
