@@ -12,7 +12,10 @@
             <div class="col">
                 <!-- title -->
 
-                <h1>REGISTERED WEBSITES</h1>
+                <h1>YOU CANN REGISTERED YOUR YouTube Channelus</h1>
+                <p>※Registration can be over multiple categories bellow.</p>
+                <p>※Multiple chanel registration is also available.</p>
+                <p>- Let's increase your channel public appearance effectively!</p>
 
                 <!-- error msg -->
                 <div>
@@ -45,7 +48,7 @@
         <div class="col">
             <!-- agent check -->
             <h6 class="text-center">Device: {{ $agent }}<h6>
-                <h5 style="text-decoration:underline">[HOW TO DELETE] Put email and password bellow.</h5>
+                <h5 style="text-decoration:underline">[If you want to delete] Put email and password bellow.</h5>
         </div>
     </div>
 
@@ -62,7 +65,7 @@
                 @if ($error_msg)
                 <p>{{ $error_msg }}</p>
                 @endif
-                <table class="table table-dark table-borderless">
+                <table class="table table-light table-borderless">
                     <thead>
                         <tr>
                             <th style="width: 15%">IMG</th>

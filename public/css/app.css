@@ -52,7 +52,7 @@ html {
 }
 
 footer{
-  background-color: #000;
+  background-color: rgb(230, 0, 0);
   height:350px;
   color:white;
 }
@@ -1780,7 +1780,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  color: rgb(18, 18, 18);
 
   table-layout: fixed;
   word-break: break-all;
@@ -1791,16 +1791,16 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #1a1a1a;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid #1a1a1a;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #1a1a1a;
 }
 
 .table-sm th,
@@ -1809,12 +1809,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: 1px solid #1a1a1a;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #dee2e6;
+  border: 1px solid #1a1a1a;
 }
 
 .table-bordered thead th,
@@ -1879,35 +1879,35 @@ pre code {
 
 .table-hover .table-secondary:hover > td,
 .table-hover .table-secondary:hover > th {
-  background-color: #c8cbcf;
+  background-color: #3c3c3c;
 }
 
 .table-success,
 .table-success > th,
 .table-success > td {
-  background-color: #c7eed8;
+  background-color: #ffffff;
 }
 
 .table-success th,
 .table-success td,
 .table-success thead th,
 .table-success tbody + tbody {
-  border-color: #98dfb6;
+  border-color: #3c3c3c;;
 }
 
 .table-hover .table-success:hover {
-  background-color: #b3e8ca;
+  background-color:#3c3c3c;
 }
 
 .table-hover .table-success:hover > td,
 .table-hover .table-success:hover > th {
-  background-color: #b3e8ca;
+  background-color: #3c3c3c;
 }
 
 .table-info,
 .table-info > th,
 .table-info > td {
-  background-color: #d6e9f9;
+  background-color: #3c3c3c;
 }
 
 .table-info th,
