@@ -52,7 +52,7 @@ html {
 }
 
 footer{
-  background-color: rgb(230, 0, 0);
+  background-color: #BF0000;
   height:350px;
   color:white;
 }
@@ -2701,7 +2701,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #000000;
+  background-color: #b60000;
   border-color: #000000;
 }
 
@@ -4466,6 +4466,7 @@ input[type=button].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  background-color: #BF0000;
 }
 
 .nav-link {

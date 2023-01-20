@@ -77,7 +77,7 @@ APP_URL=https://axelrod/Axelrod-BBS-BASE
 DB_CONNECTION=mysql
 DB_HOST=mysql57.axelrod.sakura.ne.jp
 DB_PORT=3306
-DB_DATABASE=axelrod_core
+DB_DATABASE=wp664543_alyoutube
 DB_USERNAME= axelrod
 DB_PASSWORD=Webpassw0rd1
 
@@ -89,9 +89,9 @@ DB_PASSWORD=Webpassw0rd1
 
 10. シンボリックリンク作成
 ln -s /home/{FTPアカウント名}/{laravelプロジェクト名}/public /home/{FTPアカウント名}/www/{シンボリックリンク名}
-ln -s /home/axelrod/BBS-Bear-jp/public /home/axelrod/www/BBS-Bear-jp
+ln -s /home/axelrod/Axelrod-BBS-youtube/public /home/axelrod/www/Axelrod-BBS-youtube
 
-11. strage link作成して画像表示
+11. storage link作成して画像表示
 - php artisan storage:link
 
 12. https化
@@ -103,5 +103,68 @@ public function boot() {
     if (App::environment('production','staging')) {
         URL::forceScheme('https');
     }
-APP:simplebbs
-ver2.00-en
+APP:YouTube-Axelrod-BBS
+ver1.01-en
+
+
+
+
+SHINSERVER
+
+1. Server in
+- ssh -l wp664543 -i wp664543.key wp664543.wpx.jp -p 10022
+
+2. Composer install
+- curl -sS https://getcomposer.org/installer | php
+- php composer.phar
+
+3. dir add
+mkdir -p storage/framework/cache/data/
+mkdir -p storage/framework/app/cache
+mkdir -p storage/framework/sessions
+mkdir -p storage/framework/views
+
+4. env db (ATT db name small char)
+APP_NAME=Axelrod-BBS-youtube
+APP_ENV=public
+APP_KEY=base64:i+bThXnKOVo7NZ6I4Z6mHuoc+MQVF9Np/sTJJaKwdn4=
+APP_DEBUG=false
+APP_URL=https://youtube.axelrod.cc
+DB_CONNECTION=mysql
+DB_HOST= localhost
+DB_PORT=3306
+DB_DATABASE= wp664543_alyoutube
+DB_USERNAME=wp664543_axelrod
+DB_PASSWORD=webpassw0rd1
+
+5. symbolic
+ln -s /home/wp664543/Axelrod-BBS-youtube/public  /home/wp664543/wp664543.wpx.jp/public_html
+
+6. storage link
+php artisan storage:link
+
+7. https ssl app/Providers/AppServiceProvider.php 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\URL;
+public function boot() {
+    if (App::environment('production','staging')) {
+        URL::forceScheme('https');
+    }
+}
+
+8. htaccess
+route delete
+
+ln -s /home/wp664543/axelrod.cc/public_html
+
+mv /home/wp664543/wp664543.wpx.jp/public_html /home/wp664543/wp664543.wpx.jp/_public_html
+ln -s /home/wp664543/youtube.axelrod.cc/Axelrod-BBS-youtube/public /home/wp664543/axelrod.cc/public_html
+
+
+
+root
+/home/wp664543/axelrod.cc/public_html/
+BF0000
+
+
+                    <!-- <input type="image" ID="rabbit2" src="{{ asset('images/register2.png') }}" alt="Register"> -->

@@ -11,7 +11,7 @@
         <div class="row  text-center">
             <div class="col">
                 <!-- title -->
-                <br><h1 class="text-center">【TRAVEL】</h1><br>
+                <h1 class="text-center">【TRAVEL】</h1>
                 <h1>REGISTERED WEBSITES</h1>
 
                 <!-- error msg -->
@@ -234,9 +234,9 @@
                         <textarea name="description" rows="5" cols="100" class="form-control"  value="{{old('description')}}">{{old('description')}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label>4.IMG [jpeg, jpg, png, bmb]</label><br>
+                        <label>4.IMG [jpeg, jpg, png, bmb]</label>
                         <input type="file" name="thumbnail" value="{{old('thumbnail')}}" multiple="multiple"/>
-                        {{ csrf_field() }}<br>
+                        {{ csrf_field() }}
                     </div>
                     <div class="form-group">
                         <label>5.NAME</label>
@@ -350,7 +350,7 @@
         <div class="row  text-center">
             <div class="col">
                 <!-- title -->
-                <br><h1 class="text-center">【TRAVEL】</h1><br>
+                <h1 class="text-center">【TRAVEL】</h1>
                 <h1>REGISTERED WEBSITES</h1>
 
                 <!-- error msg -->
@@ -444,7 +444,7 @@
                             </td>
                         </tr>
                         <tr>
-                        <td><br></td><td><br></td><td><br></td><td><br></td>
+                        <td></td><td></td><td></td><td></td>
                         </tr>
                     @endforeach
                 </table>
@@ -588,9 +588,9 @@
                         <textarea name="description" rows="5" cols="100" class="form-control"  value="{{old('url')}}">{{old('description')}}</textarea>
                     </div>
                     <div class="form-group">
-                        <label>4.IMG (jpeg, jpg, png, bmb)</label><br>
+                        <label>4.IMG (jpeg, jpg, png, bmb)</label>
                         <input type="file" name="thumbnail" value="{{old('thumbnail')}}" multiple="multiple"/>
-                        {{ csrf_field() }}<br>
+                        {{ csrf_field() }}
                     </div>
                     <div class="form-group">
                         <label>5.NAME</label>

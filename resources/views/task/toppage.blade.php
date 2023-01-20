@@ -12,10 +12,13 @@
             <div class="col">
                 <!-- title -->
 
-                <h1>YOU CANN REGISTERED YOUR YouTube Channelus</h1>
-                <p>※Registration can be over multiple categories bellow.</p>
-                <p>※Multiple chanel registration is also available.</p>
-                <p>- Let's increase your channel public appearance effectively!</p>
+                <h1>YOU CANN REGISTER YOUR YouTube Channels bellow!</h1>
+                <h4>[Description]</h4>
+                <p>・(Cost) FREE!! This is totally free digital YouTube marketin tool for you!</p>
+                <p>・(To whome) Anyone who can possese a YouTube channel.</p>
+                <p>・(Purpose) Get more YouTube viewers and subscribe.</p>
+                <p>・(Attention) Only suitable categories.</p>
+                <p>・(Delete) Put your email and delete password.</p>
 
                 <!-- error msg -->
                 <div>
@@ -48,7 +51,6 @@
         <div class="col">
             <!-- agent check -->
             <h6 class="text-center">Device: {{ $agent }}<h6>
-                <h5 style="text-decoration:underline">[If you want to delete] Put email and password bellow.</h5>
         </div>
     </div>
 
@@ -72,8 +74,8 @@
                             <th style="width: 20%">TITLE</th>
                             <th style="width: 30%">DESCRIPTION</th>
                             <th style="width: 10%">URL</th>
-                            <th style="width: 10%">CATEGORY</th>
-                            <th style="width: 20%">[DELETE]</th>
+                            <th style="width: 15%">CATEGORY</th>
+                            <th style="width: 15%">[DELETE]</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -130,7 +132,7 @@
             <div class="col">
                 <h1>REGISTRATIONN</h1>
                 <h6>Fill up all items bellow</h6>
-                <h5 style="text-decoration:underline"> [Who can register?] Company, Organization, Individual, Group whatsover.</h5>
+                <h6>For Instagram, TikTok, Twitter etc, you can GO OTHER URLs↓</h6>
             </div>
         </div>
     </div>
@@ -242,7 +244,7 @@
                         {{ csrf_field() }}<br>
                     </div>
                     <div class="form-group">
-                        <label>5.NAME</label>
+                        <label>5.YOUR NAME (Hidden)</label>
                         <input type="text" name="yourname"value="{{old('yourname')}}" rows="1" cols="1" class="form-control">
                     </div>
                     <div class="form-group">
@@ -261,8 +263,15 @@
                         @endforeach
                     </div>
 
-                    <input type="submit" value="REGISTER" class="btn btn-primary">
+                    <input type="submit" value="REGISTER" class="btn btn-primary"><!-- admax -->
+<script src="https://adm.shinobi.jp/s/38d3ef270b2c7117753b56cd85fa9297"></script>
+<!-- admax -->
+                    
                 </form>
+                
+                <!-- admax -->
+<script src="https://adm.shinobi.jp/s/6b8240817566fb9e707c7a3df5720407"></script>
+<!-- admax -->
 
                 <!-- center bottom -->
                 <div class="card-body">
@@ -322,6 +331,25 @@
                 <script src="https://adm.shinobi.jp/s/42491d2ae5461922577203e25e507c59"></script>
                 <!-- admax -->
             </div>
+        </div>
+    </div>
+
+
+    <!-- row4 -->
+    <div class="container-fluid">
+        <div class="row  text-center" style="margin-bottom:50px; margin-top:150px">
+            <div class="col">
+                <h1>↓If you have Instagram, TikTok, Twitter etc other, then register from here↓</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-3">
+            <li> <a href="{{ route('task.toppageFood') }}">Instagram</a></li>
+            <li> <a href="{{ route('task.toppageTravel') }}">Twitter</a></li>
+            <li> <a href="{{ route('task.toppageBeauty') }}">TikTok</a></li>
+            <li> <a href="{{ route('task.toppageCulture') }}">Tumblr</a></li>
+            <li> <a href="{{ route('task.toppageArt') }}"></a></li>
         </div>
     </div>
 
@@ -397,7 +425,7 @@
                 <table class="table table-dark table-borderless">
                     @foreach ($tasks as $task)
                         <tr>
-                            <th style="width: 100%; text-align:center;">TITLE</th>
+                            <th style="width: 100%; text-align:center;">CHANNEL NAME</th>
                         </tr>
                         <tr>
                             <td>{{ $task->cname }}</td>
@@ -578,7 +606,7 @@
                     @csrf
                     <p></p>
                     <div class="form-group">
-                        <label>1.TITLE[Max40]</label>
+                        <label>1.CHANNEL NAME [Max40]</label>
                         <input type="text" name="cname" rows="1" cols="1" value="{{old('cname')}}" class="form-control">
                     </div>
                     <div class="form-group">
@@ -595,7 +623,7 @@
                         {{ csrf_field() }}<br>
                     </div>
                     <div class="form-group">
-                        <label>5.NAME</label>
+                        <label>5.YOUR NAME (Hidden)</label>
                         <input type="text" name="yourname"value="{{old('yourname')}}" rows="1" cols="1" class="form-control">
                     </div>
                     <div class="form-group">
@@ -616,7 +644,11 @@
                     </div>
 
                     <input type="submit" value="REGISTER" class="btn btn-primary" name="category">
+                    
                 </form>
+                <!-- admax -->
+<script src="https://adm.shinobi.jp/s/38d3ef270b2c7117753b56cd85fa9297"></script>
+<!-- admax -->
 
                 <!-- center bottom -->
                 <div class="card-body">
